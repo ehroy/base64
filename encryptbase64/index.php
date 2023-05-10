@@ -41,7 +41,7 @@
         <h1><b>ENKRIPSI GAMBAR BASE64</b></h1> 
       </div>
       
-      <p>Menggunakan Algoritma Base64</p> 
+      <p>Menggunakan Kombinasi Algoritma Base64 dan AES128</p> 
       <a class="btn btn-primary lg btn-lg" href="enkripsi.php">Mulai Enkripsi</a>
       <a class="btn btn-success lg btn-lg" href="#bantuan">Panduan Penggunaan</a>
     </div>

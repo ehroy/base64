@@ -65,9 +65,26 @@
           <?php
             if(isset($_POST['submit'])){
               $teks = @$_POST['teks'];
+              // print_r(base64_decode($teks));
+              // header('Content-Description: File Transfer');
+              // header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+              // header('Content-Disposition: attachment; filename='.$teks.'');
+              // header('Content-Transfer-Encoding: binary');
+              // header('Expires: 0');
+              // header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+              // header('Pragma: public');
+              // header('Content-Length: ' . filesize($teks));
+              // ob_clean();
+              // flush();
+              // readfile('resumeFolder/'.$teks);
+              // exit(); 
           ?>
           <br>
-          <img style="" border="0" src="data:image/jpeg;base64,<?php echo $teks;?>" class = "img-thumbnail img-responsive">
+          <embed width='1366px' height='623px'frameborder='0' type="application/pdf" src="data:application/pdf;base64,<?php echo $teks; ?>"></embed>
+
+          <!-- <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://remote.url.tld/path/to/document.doc',href="application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,<?php echo $teks;?>" width='1366px' height='623px' frameborder='0'>This is an embedded <a target='_blank' href='http://office.com'>Microsoft Office</a> document, powered by <a target='_blank' href='http://office.com/webapps'>Office Online</a>.</iframe> -->
+          <!-- <a href="application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,<?php echo $teks;?>" download="hasil.docx" target="blank">Download</a> -->
+          <!-- <img style="" border="0" src="application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,<?php echo $teks;?>" class = "img-thumbnail img-responsive"> -->
         </div>
           <?php
             }

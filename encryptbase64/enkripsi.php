@@ -37,7 +37,7 @@
 
     <div class="container-fluid bg-cover" id="enkripsi" style="margin-top:0px;">
       <div class="page-header">
-        <h3><b>ENKRIPSI GAMBAR</b></h3> 
+        <h3><b>ENKRIPSI FILE PDF</b></h3> 
       </div>
         <div class="col-md-4">
             <form method="post" enctype="multipart/form-data">
@@ -56,7 +56,8 @@
                 
                 <?php
 
-                $valid_array = array('jpg','jpeg','png','gif','bmp');
+                $valid_array = array('jpg','jpeg','png','gif','bmp','mp4','docx','pdf');
+                // print_r($_FILES['gambar']);
                 if(isset($_POST['submit']) && $_FILES['gambar']['size']>0){
 
                   $ext = @strtolower(end(@explode('.', $_FILES['gambar']['name'])));
